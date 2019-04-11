@@ -1,0 +1,285 @@
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  font-family: "Lato", Helvetica, sans-serif;
+  color: #404040;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  line-height: 24px;
+}
+
+.img img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+header {
+  min-height: 75px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 1;
+  box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, .3);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.menu-btn {
+  padding: 10px;
+  border: 1px solid #333333;
+  border-radius: 4px;
+  background: #808080;;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-btn__line {
+  width: 20px;
+  height: 2px;
+  margin-bottom: 4px;
+  background: #ffffff;
+}
+
+.menu-btn__line:last-child {
+  margin-bottom: 0;
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav__item {
+  margin-right: 20px;
+  transition: .3s ease all;
+}
+
+.nav__item:hover {
+  color: #e96656;
+}
+
+.nav__item:last-of-type {
+  margin: 0;
+}
+
+main {
+  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('../img/tapeciarnia.pl-128409_stadion_sportowy.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.hero {
+  min-height: 120vh;
+  padding-top: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero .content {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.hero .content h1 {
+  font-size: 55px;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.hero .content span {
+  display: block;
+  color: #dc143c;
+  margin-bottom: 45px;
+}
+
+.hero .content a {
+  display: inline-block;
+  font-size: 14px;
+  background: #e96656;
+  padding: 14px 35px;
+  max-width: 30%;
+  min-width: 300px;
+  margin: 10px;
+  border-radius: 5px;
+  transition: .3s all ease-in-out;
+}
+
+.hero .content a:hover {
+  background: #cb4332;
+}
+
+.hero .content a:last-of-type {
+  background: #1e9e6b;
+}
+
+.hero .content a:last-of-type:hover {
+  background: #069059;
+}
+
+.description {
+  background: #ffffff;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.description h2 {
+  text-transform: uppercase;
+  font-size: 45px;
+  font-family: "Montserrat", Helvetica, sans-serif;
+}
+
+.description h2 span {
+  color: #dc143c;
+}
+
+.description p:first-of-type {
+  margin-bottom: 75px;
+}
+
+.description p a {
+  text-transform: none;
+}
+
+.description h3 {
+  font-size: 25px;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+
+.description p:nth-of-type(2) {
+  margin-bottom: 25px;
+}
+
+.description img {
+  display: block;
+  margin: 0 auto 25px;
+}
+
+.description a {
+  text-transform: uppercase;
+  color: #e96656;
+}
+
+footer {
+  background: #272727;
+}
+
+footer p {
+  padding: 10px;
+  text-align: center;
+  color: #c0c0c0;
+}
+ 
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
+
+  .hero .content h1 {
+
+  }
+
+  .description h2 {
+
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+
+  .hero .content h1 {
+    font-size: 45px;
+  }
+  
+  .description h2 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 0 15px;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  .nav {
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    margin-bottom: 10px;
+  }
+
+  .opened {
+    max-height: 150px;
+  }
+
+  .nav__item {
+    padding: 12px 0;
+    border-bottom: 1px solid #ededed;
+    width: 100%;
+  }
+  
+  .hero .content h1 {
+    font-size: 42px;
+  }
+  
+  .description h2 {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero .content h1 {
+    font-size: 32px;
+  }
+  
+  .description h2 {
+    font-size: 25px;
+  }
+}
