@@ -1,7 +1,8 @@
 *, *:before, *:after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -37,12 +38,17 @@ header {
   width: 100%;
   background: #ffffff;
   z-index: 1;
-  box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, .3);
+          box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, .3);
 }
 
 .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .nav__img {
@@ -73,12 +79,18 @@ header {
 
 .nav__list {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav__item {
   margin-right: 20px;
+  -webkit-transition: .3s ease all;
+  -o-transition: .3s ease all;
   transition: .3s ease all;
 }
 
@@ -91,20 +103,27 @@ header {
 }
 
 main {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,.5)), to(rgba(0,0,0,.5))), url('../img/tapeciarnia.pl-128409_stadion_sportowy.jpg');
+  background: -o-linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('../img/tapeciarnia.pl-128409_stadion_sportowy.jpg');
   background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url('../img/tapeciarnia.pl-128409_stadion_sportowy.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
+  background-position: center center;
 }
 
 .hero {
   min-height: 120vh;
   padding-top: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .hero .content {
@@ -134,6 +153,8 @@ main {
   min-width: 300px;
   margin: 10px;
   border-radius: 5px;
+  -webkit-transition: .3s all ease-in-out;
+  -o-transition: .3s all ease-in-out;
   transition: .3s all ease-in-out;
 }
 
@@ -202,20 +223,6 @@ footer p {
   text-align: center;
   color: #c0c0c0;
 }
- 
-@media screen and (max-width: 1200px) {
-  .container {
-    max-width: 970px;
-  }
-
-  .hero .content h1 {
-
-  }
-
-  .description h2 {
-
-  }
-}
 
 @media screen and (max-width: 992px) {
   .container {
@@ -241,16 +248,26 @@ footer p {
   }
 
   .nav {
-    align-items: center;
-    flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 
   .nav__list {
-    flex-direction: column;
-    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     width: 100%;
     max-height: 0px;
     overflow: hidden;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
     margin-bottom: 10px;
   }
